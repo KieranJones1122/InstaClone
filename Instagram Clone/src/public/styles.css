@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100%;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+/* HEADLINE */
+.headline {
+    font-family: 'Lobster', cursive;
+    margin: 5rem 0;
+    font-size: 3rem;
+    text-align: center;
+}
+
+/* GLOBAL */
+button, input {
+    font-family: inherit;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* MAIN STYLING */
+
+.container {
+    width: min(90%, 500px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form, .signup-form {
+    min-width: 100%;
+    display: none;
+}
+
+.login-form h2, .signup-form h2 {
+    margin-bottom: 1rem;
+}
+
+.login-form.active, .signup-form.active {
+    display: block;
+}
+
+#signup__form, #login__form {
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+}
+
+#signup__form input, #login__form input {
+    margin-bottom: .75rem;
+    padding: 10px;
+    border-radius: .3rem;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+
+}
+
+#signup__form button, #login__form button {
+    padding: 1em 1.25em;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: rgb(30, 30, 30);
+    color: white;
+    border: none;
+    border-radius: .5rem;
+    transition: background-color 0.2s ease-in;
+}
+
+#signup__form button:hover, #login__form button:hover {
+    background-color: rgb(58, 58, 58);
+}
+
+.login-error-message, 
+.signup-error-message {
+    padding: 10px;
+    margin: .5rem 0;
+    color: white;
+    background-color: rgb(251, 39, 39);
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: .5rem;
+    display: none;
+}
+
+.login-error-message.show, 
+.signup-error-message.show {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login-error-message .close-error-message, 
+.signup-error-message .close-error-message {
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+.form-message {
+    margin: .8rem 0;
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+#redirect-signup, #redirect-login {
+    color: rgb(49, 49, 252);
+    cursor: pointer;
+}
+
+/* Profile styling */
+
+main {
+    width: min(90%, 800px);
+    margin: 0 auto;
+
+}
+
+header {
+    min-width: 100%;
+    background-color: black;
+    color: white;
+}
+
+nav {
+    width: min(90%, 800px);
+    min-height: 3rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#logo {
+    font-family: "Lobster", cursive;
+    font-size: 2rem;
+
+}
+
+.profile__header {
+    display: flex;
+    gap: 5rem;
+    margin: 2rem 0;
+
+}
+
+.profile__thumbnail {
+    min-width: 150px;
+    min-height: 150px;
+    border-radius: 50%;
+    background-image: url("../public/images/360_F_551963598_53hrJ2UXDoC00XhkqJ8lKN8Xa2EQg4no.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.profile__stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.profile__headline {
+    font-size: 2rem;
+    font-weight: 700;
+
+}
+
+.profile__details {
+    display: flex;
+    justify-content: space-between;
+    max-width: 20rem;
+}
+
+.profile__pics {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.profile__pic {
+    aspect-ratio: auto 1/1;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 630px) {
+    .profile__header {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}

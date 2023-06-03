@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User action</title>
+    <link rel="stylesheet" href="../public/styles.css">
+</head>
+<body>
+    <div class="container">
+       <h1 class="headline">InstaClone</h1>
+       <div class="login-form active">
+        <h2>Login</h2>
+        <form id="login__form">
+            <div class="login-error-message">
+                <span class="message">Invalid Credentials</span>
+                <span class="close-error-message">&times;</span>
+            </div>
+            <label for="username">Username</label>
+            <input type="text" name="username" id="loginusername" />
+            <label for="password">Password</label>
+            <input type="password" name="password" id="loginpassword" />
+            <button>Login</button>
+            <span class="form-message">Create an <span id="redirect-signup">Account?</span></span>
+        </form>
+       </div> 
+       <div class="signup-form">
+        <h2>Sign Up</h2>
+        <form id="signup__form">
+            <div class="signup-error-message">
+                <span class="message">Invalid Credentials</span>
+                <span class="close-error-message">&times;</span>
+            </div>
+            <label for="username">Username</label>
+            <input type="text" name="username" id="signup-username" />
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" />
+            <label for="password">Password</label>
+            <input type="password" name="password" id="signup-password" />
+            <label for="confirm-password">Confirm Password</label>
+            <input 
+            type="password" 
+            name="confirm-password" 
+            id="confirm-password" 
+            />
+            <button>Sign Up</button>
+            <span class="form-message">Already Have an <span id="redirect-login">Account?</span></span>
+        </form>
+       </div> 
+    </div>
+    <script src="../public/client.js"></script>
+</body>
+</html>
